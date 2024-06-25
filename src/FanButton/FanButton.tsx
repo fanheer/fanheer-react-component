@@ -1,7 +1,7 @@
 import React from "react";
 import "./fanbutton.css";
 
-interface FanButtonProps {
+export interface FanButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -35,12 +35,12 @@ export const FanButton = ({
   ...props
 }: FanButtonProps) => {
   const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+    ? "fanheer-button--primary"
+    : "fanheer-button--secondary";
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
+      className={["fanheer-button", `fanheer-button--${size}`, mode].join(
         " "
       )}
       style={{ backgroundColor }}

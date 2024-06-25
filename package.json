@@ -1,7 +1,18 @@
 {
   "name": "fanheer-react-component",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.2",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "license": "MIT",
+  "author": {
+    "name": "fanheer",
+    "email": "fanheer@163.com"
+  },
+  "description": "React component demo",
+  "homepage": "https://github.com/fanheer",
+  "files": [
+    "es"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -22,7 +33,7 @@
     "ling-staged": "ling-staged",
     "prepare": "husky install",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rimraf es && rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
@@ -50,6 +61,10 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-strip": "^3.0.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-essentials": "^8.1.10",
     "@storybook/addon-interactions": "^8.1.10",
     "@storybook/addon-links": "^8.1.10",
@@ -61,6 +76,8 @@
     "@storybook/test": "^8.1.10",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
+    "autoprefixer": "^10.4.19",
+    "chromatic": "^11.5.4",
     "commitlint": "^19.3.0",
     "eslint": "^9.5.0",
     "eslint-config-react-app": "^7.0.1",
@@ -72,6 +89,8 @@
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "prop-types": "^15.8.1",
+    "rollup-plugin-node-externals": "^7.1.2",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.1.10",
     "webpack": "^5.92.1"
   }
